@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org.1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<!-- <script -->
+<!-- 	src="http://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/4.5.2/js/bootstrap.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+crossorigin="anonymous"></script>
+</head>
+<body>
+	<div align="center">
+		<h1>Create New Student</h1>
+		<br />
+		<div class="col-sm-4">
+			<form action="#" th:action="@{/save}" th:object="${student}"
+				method="post">
+				
+				<div align="left">
+					<tr>
+						<label class="form-lable">Student Name</label>
+						<td><input type="hidden" th:field="*{id}"> <input
+							type="text" th:field="*{studentname}" class="form-control"
+							placeholder="Student Name" /></td>
+					</tr>
+				</div>
+				<div align="left">
+					<tr>
+						<label class="form-label">Course</label>
+						<td><input type="text" th:field="*{course}"
+							class="form-control" placeholder="Course" /></td>
+					</tr>
+				</div>
+				<div align="left">
+					<tr>
+						<label class="form-label">Fee</label>
+						<td>
+						<input type="text" th:field="*{fee}" class="form-control"
+							placeholder="Fee" />
+						</td>
+					</tr>
+				</div>
+				<br>
+				<tr>
+					<td colspan="2"><button type="submit" class="btn btn-info">Save</button></td>
+					<td colspan="2"><button type="reset" class="btn btn-info">Reset</button></td>
+					<td><a href="/" class="btn btn-info">Cancle</a></td>
+				</tr>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
